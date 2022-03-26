@@ -1,0 +1,90 @@
+.card{
+    width: 100%;
+    box-shadow: 0 1.5rem 2rem rgba($color: #000000, $alpha: .3);
+    background: $color-white;
+    
+    &__picture{
+        background-size: cover;
+        height: 23rem;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        
+
+        &--1{
+            background-image: url(../../img/img-sea.jpg);
+        }
+        
+        &--2{
+            background-image: url(../../img/img-snow.jpg);
+        }
+        
+        &--3{
+            background-image: url(../../img/img-forest.jpg);
+        }
+    }
+
+    &__heading{
+        font-size: 1.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $color-primary;
+        font-weight: 700;
+        text-align: center;
+        padding: 1.5rem 1.5rem 0;
+    }
+
+    &__details{
+        padding: 2.5rem;
+        
+        ul{
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li{
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+                
+                &:not(:last-child){
+                    border-bottom: 1px solid $color-grey-light-2;
+                }
+            }
+        }
+    }
+
+
+    &--blue{
+        background: $color-primary;
+
+        .card__heading{
+            color: $color-white;
+        }
+
+        .card__details{
+
+            ul{
+
+                li{
+                    color: $color-white;
+                    
+                    &:not(:last-child){
+                        border-bottom: 1px solid $color-white;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    @media only screen and (max-width:56.25em){
+        height: auto;
+        box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: .15);
+
+        &__details{
+            padding: 1rem 3rem;
+        }
+    }
+
+}

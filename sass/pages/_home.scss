@@ -1,0 +1,80 @@
+#section-about{
+    background: $color-grey-light-1;
+    padding: 15rem 0 25rem;
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .first-col{
+            padding-right: 6rem;
+        }
+
+        @media only screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+
+            .first-col{
+                padding-right: 0;
+            }
+
+            img{
+                margin-top: 5rem;
+            }
+        }
+    }
+}
+
+#section-features{
+    padding: 10rem 0 20rem;
+    background: linear-gradient(to right bottom, #0093af, #c1d4d4d2) ,url(../../img/img-bg-adventure.jpg);
+    background-size: cover;
+    transform: skewY(-6deg);
+    margin-top: -10rem;
+
+    & > *{
+        transform: skewY(6deg);
+    }
+
+    @include respond (tab-port){
+        padding: 10rem 0;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5rem;
+        
+        @media only screen and (max-width: 900px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media only screen and (max-width: 600px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+#section-tours{
+    background: $color-grey-light-1;
+    padding: 25rem 0 9rem 0;
+    margin-top: -13rem;
+
+    @include respond (tab-port){
+        padding: 20rem 0 10rem 0;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5rem;
+        justify-content: space-between;
+
+        @media only screen and (max-width: 900px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media only screen and (max-width: 600px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
